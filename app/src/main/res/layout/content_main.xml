@@ -13,37 +13,50 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 -->
-<com.google.android.flexbox.FlexboxLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!--<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/flexbox_layout"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:alignContent="flex_start"
-    app:alignItems="flex_start"
-    app:flexWrap="wrap"
+    tools:showIn="@layout/activity_main"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:showIn="@layout/activity_main">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">-->
 
-    <TextView
-        android:id="@+id/textview1"
-        style="@style/FlexItem"
-        android:layout_width="@dimen/flex_item_length2"
-        android:layout_height="@dimen/flex_item_length"
-        android:text="@string/one" />
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/flexbox_layout"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:showIn="@layout/activity_main"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:alignContent="flex_start"
+        app:alignItems="flex_start"
+        app:flexWrap="wrap">
 
-    <TextView
-        android:id="@+id/textview2"
-        style="@style/FlexItem"
-        android:layout_width="@dimen/flex_item_length3"
-        android:layout_height="@dimen/flex_item_length"
-        android:text="@string/two" />
+        <TextView
+            android:id="@+id/textview1"
+            style="@style/FlexItem"
+            android:layout_width="@dimen/flex_item_length2"
+            android:layout_height="@dimen/flex_item_length"
+            app:layout_flexGrow="2"
+            android:text="@string/one"/>
 
-    <TextView
-        android:id="@+id/textview3"
-        style="@style/FlexItem"
-        android:layout_width="@dimen/flex_item_length"
-        android:layout_height="@dimen/flex_item_length"
-        android:text="@string/three" />
+        <TextView
+            android:id="@+id/textview2"
+            style="@style/FlexItem"
+            android:layout_width="@dimen/flex_item_length3"
+            android:layout_height="@dimen/flex_item_length"
+            android:text="@string/two"/>
 
-</com.google.android.flexbox.FlexboxLayout>
+        <TextView
+            android:id="@+id/textview3"
+            style="@style/FlexItem"
+            android:layout_width="@dimen/flex_item_length"
+            android:layout_height="@dimen/flex_item_length"
+            android:text="@string/three"/>
+
+    </com.google.android.flexbox.FlexboxLayout>
+<!--</ScrollView>-->
+
